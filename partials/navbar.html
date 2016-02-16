@@ -1,0 +1,119 @@
+<div style="margin-top:50px;">
+<div class="col-md-2">
+  <ul class="navbar" ng-controller="navController">
+    <a href='#/events' id="event" ng-click="nav('event')"><li class="navelem">EVENTS</li></a>
+    <a href='#/wkshops' id="wkshop" ng-click="nav('wkshop')"><li class="navelem">WORKSHOPS</li></a>
+    <a href='#/gl' id="gl" ng-click="nav('gl')"><li class="navelem">GL</li></a>
+    <a href='#/karnival' id="karnival" ng-click="nav('karnival')"><li class="navelem">KARNIVAL</li></a>
+  </ul>
+</div>
+<!--wkshop header-->
+<div class="col-md-10 col-md-push-1 wkshopheader header">
+  <div class="navheader col-md-push-1 col-md-12">
+    <div class="col-md-1 mg-md ">
+      <a href="#/wkshops/engineering">
+        <div class="eventCircle">
+          <i class="fa fa-gear eventicon"></i>
+          <div class="btmText">Engineering</div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-1 mg-md ">
+      <a href="#/wkshops/management">
+        <div class="eventCircle">
+          <i class="fa fa-money eventicon"></i>
+          <div class="btmText">Management</div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-1 mg-md ">
+      <a href="#/wkshops/robotics">
+        <div class="eventCircle">
+          <i class="fa fa-android eventicon"></i>
+          <div class="btmText">Robotics</div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-1 mg-md ">
+      <a href="#/wkshops/general">
+        <div class="eventCircle">
+          <i class="fa fa-archive eventicon"></i>
+          <div class="btmText">General</div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-1 mg-md ">
+      <a href="#/wkshops/school">
+        <div class="eventCircle">
+          <i class="fa fa-university eventicon"></i>
+          <div class="btmText">School</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!--event header -->
+<div class="col-md-10 eventheader header">
+  <div class="navheader col-md-push-1 col-md-12">
+    <div class="col-md-1 mg-md ">
+      <a href="#/events/engineering">
+        <div class="eventCircle">
+          <i class="fa fa-gear eventicon"></i>
+          <div class="btmText">Engineering</div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-1 mg-md ">
+      <a href="#/events/management">
+        <div class="eventCircle">
+          <i class="fa fa-money eventicon"></i>
+          <div class="btmText">Management</div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-1 mg-md ">
+      <a href="#/events/robotics">
+        <div class="eventCircle">
+          <i class="fa fa-android eventicon"></i>
+          <div class="btmText">Robotics</div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-1 mg-md ">
+      <a href="#/events/general">
+        <div class="eventCircle">
+          <i class="fa fa-archive eventicon"></i>
+          <div class="btmText">General</div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-1 mg-md ">
+      <a href="#/events/coding">
+        <div class="eventCircle">
+          <i class="fa fa-terminal eventicon"></i>
+          <div class="btmText">Coding</div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-1 mg-md ">
+      <a href="#/events/quizzes">
+        <div class="eventCircle">
+          <i class="fa fa-binoculars eventicon"></i>
+          <div class="btmText">Quizzes</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+$(document).ready(function(){
+$(".wkshopheader").fadeOut(0).finish();
+$("#event").find(".navelem").addClass("navselected");
+$(".eventCircle").click(function(){
+  $(".eventCircle").removeClass("eventCircleSelected");
+  $(this).addClass("eventCircleSelected");
+});
+});
+</script>

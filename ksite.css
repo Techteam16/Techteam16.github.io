@@ -1,0 +1,422 @@
+html,body{
+	overflow-x:hidden !important;
+	background:rgb(0,7,42);
+	}
+a:active, a:focus{
+		background:none !important;
+		outline: none !important;
+	}
+	li{
+		list-style:none;
+	}
+/*NAVBAR*/
+.navbar{
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.1);
+	margin-top:-50px;
+}
+.navbar .navelem{
+	display:block;
+	font-size:1.5rem;
+	padding:6%;
+	height:100px;
+	border-bottom:2px solid rgba(0,255,255,0.5);
+	-webkit-transition:all 0.2s;
+	-moz-transition:all 0.2s;
+	transition:all 0.2s;
+	color:#fff;
+	font-family:'Ubuntu',sans-serif;
+	line-height:4;
+}
+.navelem:hover, .navelem:focus, .navelem:active{
+	background:rgba(0,0,0,0.2);
+	box-shadow:0px 2px 2px rgba(0,255,255,0.3);
+}
+/*HEADER*/
+.header{
+	margin-top:-50px;
+}
+.headerPics{
+		width:100%;
+		height:auto;
+	}
+	.headerBox{
+		height:130px;
+	}
+	#ceg{
+		width:55%;
+		margin-top:10px;
+	}
+	#k{
+		width:90%;
+		margin-top:-20%;
+	}
+	#unesco{
+		width:60%;
+		margin-top:-10px;
+		margin-left:80px;
+	}
+/*NAVHEADERS*/
+.navheader{
+	width:100%;
+	height:80px;
+	background:none;
+	margin-bottom:50px;
+}
+.eventCircle{
+	width:70px;
+	height:70px;
+	border:3px solid aqua;
+	border-right-color:#008684;
+	border-left-color:#008684;
+	font-family: 'Ubuntu',sans-serif;
+	border-radius:50%;
+	margin-right:10%;
+	-webkit-transition:all 0.2s;
+	-moz-transition:all 0.2s;
+	transition:all 0.2s;
+}
+.eventCircle .eventicon{
+	text-align: center;
+	font-size:3.3rem;
+	color:#fff;
+	margin-top:25%;
+	margin-left:25%;
+}
+.eventCircleSelected{
+	border-width:7px;
+}
+.eventCircle .btmText{
+	text-align: center;
+	font-size: 1.5rem;
+	color:#fff;
+	margin-top:30px;
+}
+
+.mg-md{
+	margin-right:3%;
+}
+.eventCircle:hover{
+	border:7px solid #008684;
+	border-right-color:aqua;
+	border-left-color:aqua;
+	}
+.navselected{
+	border-bottom:5px solid rgba(0,255,255,0.7) !important;
+	border-top:5px solid rgba(0,255,255,0.7) !important;
+	background:rgba(0,0,0,0.2) !important;
+}
+/*EVENTS*/
+.eventContainer{
+	overflow:hidden;
+	margin-top:-30px;
+}
+.imagebox{
+	  width:180px;
+	  height:180px;
+	  border-radius:50% !important;
+	  border:10px solid rgb(0,254,252);
+	  border-right-color:#00b7b5;
+	  border-bottom-color:rgb(0,254,252);
+	  border-left-color:#00b7b5;
+	  background:#fff;
+	  margin-bottom:30px;
+	  cursor: pointer;
+	  padding:15px;
+	  background:none;
+	  box-shadow:0px 3px 20px rgba(255,255,255,0.35);
+	 -webkit-transition:all 0.2s;
+	 -moz-transition:all 0.2s;
+	 transition:all 0.2s;
+	  color:#333;
+	  position: relative;
+	}
+	.imagebox .overlay{
+		opacity:1;
+		background:rgba(0,0,0,0.75);
+		border-radius:50%;
+		position: absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		overflow:hidden;
+	 -webkit-transition:all 0.2s;
+	 -moz-transition:all 0.2s;
+	 transition:all 0.2s;
+	}
+	.imagebox h5{
+		font-family:'Ubuntu',sans-serif;
+		font-size:1.5rem;
+		position:relative;
+		margin-top:-50%;
+		color:#fff !important;
+		text-align: center;
+		text-shadow:0px 2px 2px rgba(255,255,255,0.3);
+	}
+	.imagebox:hover .overlay{
+	background:rgba(0,0,0,0.3);
+	}
+	.imagebox img{
+		width:100%;
+		height:100%;
+		border-radius:50%;
+	-webkit-transition:all 0.2s;
+	 -moz-transition:all 0.2s;
+	 transition:all 0.2s;
+	 filter:blur(5px);
+	 -webkit-filter:blur(5px);
+			}
+	.imagebox:hover {
+	  transform:rotate(360deg);
+	  -webkit-transform:rotate(360deg);
+	  border:5px solid rgb(0,134,132);
+	  border-right-color:rgb(0,254,252);
+	  border-bottom-color:rgb(0,134,132);
+	  border-left-color:rgb(0,254,252);
+	  -webkit-transition:border 0.3s ease forwards, transform 0.1s ease forwards;
+	  -moz-transition:border 0.3s ease forwards, transform 0.1s ease forwards;
+	  transition:border 0.3s ease forwards, transform 0.1s ease forwards;
+	}
+	.imagebox:hover img{
+		opacity:0;
+		transform:scale(2.5);
+		-webkit-transform:scale(2.5);
+		-webkit-transition:transform 0.6s ease-in forwards,opacity 0.3s ease 0.2s forwards;
+		-moz-transition:transform 0.6s ease-in forwards,opacity 0.3s ease 0.2s forwards;
+		transition:transform 0.6s ease-in forwards,opacity 0.3s ease 0.2s forwards;
+	}
+	.imagebox:hover h5{
+		text-shadow:0px 3px 5px rgba(200,247,250,0.2);
+	}
+	.boxes{
+		width:100%;
+		position:relative;
+		padding-bottom:50px;
+	  	margin-top:50px;
+	  	padding-left: 0;
+	  	padding-right: 0;
+	}
+	/*tabs*/
+	.tabContainer{
+	  width:100%;
+	  font-family:'Lato',sans-serif;
+	}
+	.tabContainer li{
+	  font-size:1.5rem;
+	  cursor: pointer;
+	  color:#fff;
+	  display:inline;
+	  float:left;
+	  margin-top:-60px;
+	  padding:20px;
+	  border-bottom:5px solid rgb(0,254,252);
+	  border-top:5px solid rgb(0,254,252);
+	  margin-bottom:10px;
+	   }
+	.tabContent {
+	  padding:20px;
+	  padding-left:100px;
+	  font-size:1.6rem;
+	  color:#fff;
+	  }
+	.tabContent p{
+	  color:#fff !important;
+	  line-height: 1.7;
+	  font-size:2rem;
+	}
+	.tabContainer li:hover{
+		background:rgb(0,99,97);
+	}
+	.left{
+	  font-family: 'Lato',sans-serif;
+	  position:absolute;
+	  width:100%;
+	  height:auto;
+	  top:35%;
+	  margin-left:100%;
+	  background-color:rgba(0,0,0,0.45); 
+	  padding-bottom:40px;
+	}
+	.ribbontitle{
+		color:#fff;
+		font-size:3.5rem;
+		font-family:'Ubuntu',sans-serif;
+	}
+	/*GL*/
+	.glCircle:active{
+		transform:scale(1.5);
+		-webkit-transform:scale(1.5);
+	}
+	.glActive{
+	  border:10px solid #fff !important;
+	  border-right-color:#eee !important;
+	  border-bottom-color:#eee !important;
+	  
+	}
+	.glAnim{
+	  margin-right: 40px;
+	}
+	.glCircle{
+		cursor: pointer;
+	  width:100px;
+	  height:100px;
+	  border-radius:50%;
+	  box-shadow:0px 6px 15px rgba(255,247,219,0.2),
+	  			0px -6px 15px rgba(255,247,219,0.2);
+	  border:5px solid #00fefc;
+	  border-right-color:#008684;
+	  border-bottom-color:#008684;
+	  filter:blur(0.05px) grayscale(20%);
+	  /*cursor: pointer;*/
+	  -webkit-transition:all 0.2s;
+	-moz-transition:all 0.2s;
+	transition:all 0.2s;
+	
+	}
+	.glBigBorder{
+	  border:15px solid #00fefc !important;
+	  border-right-color:#008684 !important;
+	  border-bottom-color:#008684 !important;
+	  box-shadow:0px 10px 10px rgba(255,255,255,0.3);
+	}
+	.glNameNoAnim{
+		background:white !important;
+	}
+	.glCircleName{
+	  width:100%;
+	  padding:10px;
+	  height:auto;
+	  color:#fff;
+	  font-size:1.5rem;
+	  margin-bottom:30px;
+	  position:relative;
+	  margin-top: 10px;
+	  text-align: center;
+	}
+	.glCircleName h5{
+		padding-left:5px;
+		padding-right:5px;
+	}
+	
+	.glCircle:hover{
+	 box-shadow:0 3px 3px rgba(0,0,0,0.3);
+	 filter:blur(0.0px) grayscale(0%);
+	}
+	/*glcontent*/
+	.glbox{
+	  width:100%;
+	  min-height:400px;
+	  max-height:auto;
+	  padding-bottom:20px;
+	  margin-bottom:80px;
+	  margin-top:0px;
+	}
+	.glbox .glbottom1{
+	  width:100%;
+	  margin-left:20px;
+	  min-height:700px;
+	  max-height:auto;
+	  background:#008684;
+	  padding-bottom:20px;
+	  position:absolute;
+	  top:0;
+	  transform:skew(-5deg) rotate(5deg);
+	}
+	.glbox .glbottom2{
+	  width:100%;
+	  margin-left:-20px;
+	  min-height:700px;
+	  max-height:auto;
+	  background:#008684;
+	  padding-bottom:20px;
+	  position:relative;
+	  transform:skew(5deg) rotate(-5deg);
+	}
+	.glpage1{
+	  width:100%;
+	  min-height:400px;
+	  max-height:auto;
+	  top:0;
+	  position:absolute;
+	  margin-bottom:30px;
+	  background:#fff;
+	  box-shadow:0px 3px 3px rgba(0,0,0,0.3);
+	}
+	.glpage2{
+	  width:100%;
+	  min-height:400px;
+	  max-height:auto;
+	  position:absolute;
+	  top:0;
+	  margin-bottom:30px;
+	  background:#fff;
+	  box-shadow:0px 3px 3px rgba(0,0,0,0.3);
+	  visibility: hidden;
+	  transform:rotate(60deg) translateX(-3000px) translateY(-300px);
+	  -webkit-transition:all 0.2s;
+	-moz-transition:all 0.2s;
+	transition:all 0.2s;
+
+	}
+	.glpage1 img,.glpage2 img{
+	  margin-top:20px;
+	  width:130px;
+	  height:130px;
+	  border-radius:50%;
+	  box-shadow:0px 3px 3px rgba(0,0,0,0.3);
+	}
+	.glpage1 .redribbon,.glpage2 .redribbon{
+	  position: absolute;
+	  top:-2px;
+	  width:auto;
+	  min-height:100px;
+	  max-height:auto;
+	  color:#000;
+	  text-align: center;
+	  font-family:'Ubuntu',sans-serif !important;
+	  font-size:1.5rem;
+	}
+	.glpage1 .glcontent,.glpage2 .glcontent{
+	  position: relative;
+	  padding:30px;
+	  margin-top:40px;
+	}
+	.glcontent p{
+	  line-height:1.6;
+	  font-size:1.5rem;
+	  text-align: center;
+	  font-family:'Ubuntu',sans-serif !important;
+	}
+	.next, .prev{
+	  position:absolute;
+	  bottom:0;
+	  color:#333;
+	  font-weight:600;
+	  cursor: pointer;
+	  right:0;
+	  font-size:2rem;
+	  padding-right:30px;
+	  padding:10px;
+	}
+	.prev{
+	  left:0;
+	  padding-left:30px;
+	}
+	.glpageanim1{
+	 visibility: hidden;
+	 -webkit-transition:all 0.2s;
+	-moz-transition:all 0.2s;
+	transition:all 0.2s;
+	
+	  transform:rotate(30deg) translateX(3000px) translateY(-200px); 
+	}
+	.glpageanim2{
+	 visibility: visible;
+	-webkit-transition:all 0.2s;
+	-moz-transition:all 0.2s;
+	transition:all 0.2s;
+	
+	  transform:rotate(0deg) translateY(0px) translateX(0px);
+	}

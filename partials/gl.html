@@ -1,0 +1,60 @@
+ <!--Gl starts here-->
+ <div class="paddingReset col-md-10 col-xs-12 container" ng-controller="glController" style="overflow:hidden;margin-bottom:30px;margin-top:-50px">
+<h1 class="paddingReset ribbontitle text-center">GUEST LECTURES</h1>
+<div class="col-md-12 col-xs-12 paddingReset clearfix" >
+    <div class="glAnim col-md-1 col-xs-12" ng-repeat="nodeItem in nodes">
+      <div class="item paddingReset">
+        <div class="anno scrim">
+          <img ng-click="clicked(nodeItem.title,nodeItem.id)" class="glCircle" src="gls/{{nodeItem.avatar}}" id="{{nodeItem.id}}">
+          <h4 class="glCircleName" ng-bind-html="nodeItem.title"><br/>
+          </h4>
+          <!-- <h4 class='glCircleName'> {{nodeItem.date|date:'medium'}} at {{nodeItem.Time}} in {{nodeItem.venue}}</h4> -->
+        </div>
+      </div>
+  </div><!--long-line -->
+<!--content-->
+</div>
+<div class="contactsAnim container col-md-6 col-md-push-3 col-xs-12">
+  <div class="glbox col-md-12 col-xs-12">
+    <div class="glpage1 glpageanim1 col-md-12 col-xs-12 paddingReset clearfix">
+      <div class="col-md-12 col-xs-2">
+        <h4 class="redribbon"><span style="font-size:1.8rem">{{clickedName}}</span><br/> {{date}} at {{Time}} in {{venue}}</h4>
+      </div>
+      <div class="glcontent col-md-12 col-xs-12" ng-bind-html="about">
+      </div>
+      <div class="next"><i class="fa fa-angle-right"></i> The Talk</div>
+    </div>
+<div class="glpage2">
+      <div class="col-md-12">
+        <h4 class="redribbon"><span style="font-size:1.8rem">{{clickedName}}</span><br/> {{date}} at {{Time}} in {{venue}}</h4>
+      </div>
+      <div class="glcontent col-md-12 col-xs-12" ng-bind-html="desc">
+    </div>
+    <div class="prev"><i class="fa fa-angle-left"></i> The Speaker</div>
+    </div>
+
+  </div>
+</div>
+<script>
+$(document).ready(function() {
+    $(".header").fadeOut(0);
+    $(".next").click(function(){
+      $(".glpage1").addClass("glpageanim1");
+      $(".glpage2").addClass("glpageanim2");
+    });
+
+    $(".prev").click(function(){
+      $(".glpage1").removeClass("glpageanim1");
+      $(".glpage2").removeClass("glpageanim2");
+    });
+});
+
+</script>
+<script>
+$(document).ready(function(){
+$(".home-event-circle").find(".circle-icon").removeClass("selectedNavElem");
+$(".home-event-circle").removeClass("removeBB");
+$("#gl").addClass("selectedNavElem");
+$("#gl").parent().parent().addClass("removeBB");
+});
+</script>

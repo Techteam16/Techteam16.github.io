@@ -1,0 +1,42 @@
+<!--image boxes start -->
+  <div ng-controller="karnivalController">
+  <div class="eventContainer container col-md-10 col-xs-12 paddingReset clearfix" >
+  <h2 class="col-md-12 col-xs-12 ribbontitle text-center">K!ARNIVAL</h2>
+  <div class="bottom col-md-12 col-xs-12 boxes paddingReset clearfix">
+   <div class=" col-md-3 col-xs-12" id="eventsBox" ng-repeat="event in events">
+    <div class="imagebox imageboxl" ng-click="getKar(event.name)">
+      <img src='http://kurukshetra.org.in/images/{{event.slug}}.jpg'/>
+      <div class="title">
+          <h5>{{event.name}}</h5>
+      </div>      
+    </div>
+   </div>
+  </div><!--btm-->
+  </div>
+  
+  <!--navbar ends-->
+  <div class="container tabsAnim left col-md-12 col-xs-12">
+  <h1 class="text-center col-md-12 col-xs-12 ribbontitle" style="font-size:3.2rem;color:rgb(255,247,219)">{{eventName}}</h1>
+   <i class="close fa fa-times fa-4x fa-fw" style="color:#fff;"></i>
+    <div class="col-md-12 col-xs-12">
+     <ul class="tabContainer">
+      <div class="col-md-12 col-xs-12">
+        <li class="tab {{tab.title}}" ng-repeat="tab in tabs" ng-click="showTab(tab.id);">{{tab.title}}
+          <i class="fa fa-chevron-down fa-fw"></i>
+        </li>
+      </div>
+     </ul>
+   </div>
+
+    <ul class="tabContent" style="margin-top:100px">
+      <li ng-repeat="tabc in tabs" class="{{tabc.id}}" ng-bind-html="toTrustedHTML(tabc.content)"></li>
+    </ul>
+  </div>
+  </div><!--tabsanim-->       
+<script>
+
+$(document).ready(function(){
+    $(".header").fadeOut(0);
+});
+
+</script>
