@@ -41,6 +41,7 @@ function closeall(){
     $(".imagebox").each(function(){
     
   $(".navbar").show();
+  $(".category").show();
       var elem = $(this);
       setTimeout(function(){
         $(elem).animate({'opacity':"1",'margin-left':"0px"},100);

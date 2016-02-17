@@ -31,7 +31,7 @@ $scope.eventName;
 var path = $location.path();
 path = '/'+path.substr(8,path.length);
 $scope.category = path.substr(1,path.length).toUpperCase()+" EVENTS";
-$http({method: 'GET', url: 'http://cms.kurukshetra.org.in/categories'+path+'.json'}).success(function(data)
+$http({method: 'GET', url: 'jsons/categories'+path+'.json'}).success(function(data)
 				   {
 				    jsonstr = data['category']['events']; // response data 
 				   	for(i=0;i<jsonstr.length;i++)
@@ -43,6 +43,7 @@ $http({method: 'GET', url: 'http://cms.kurukshetra.org.in/categories'+path+'.jso
 $scope.getEvent = function(eventname){
 	// $(".header").hide();
 	$(".navbar").hide();
+	$(".category").hide();
 	$(".imagebox").each(function(){
       var elem = $(this);
       setTimeout(function(){
@@ -50,14 +51,14 @@ $scope.getEvent = function(eventname){
       },i*50+50);
     });
 	$scope.eventName = eventname;
-	eventname = eventname.toLowerCase().replace(/[ ']/g,'-').replace('!','');
+	eventname = eventname.toLowerCase().replace(/[ ']/g,'-').replace('!','-');
 
 function init(){
 	$(".tabContent li").hide();
 	$(".tabContent").find("li.0").show();
 	
 }
-	$http({method: 'GET', url: 'http://cms.kurukshetra.org.in/events/'+eventname+'.json'}).success(function(data)
+	$http({method: 'GET', url: 'jsons/events/'+eventname+'.json'}).success(function(data)
 				   {
 				    jsonstr = data['event']['tabs']; // response data 
 				   	for(i=0;i<jsonstr.length;i++)
@@ -86,7 +87,7 @@ $scope.eventName;
 var path = $location.path();
 path = '/'+path.substr(9,path.length);
 $scope.category = path.substr(1,path.length).toUpperCase()+" WORKSHOPS";
-$http({method: 'GET', url: 'http://cms.kurukshetra.org.in/workshopcategories'+path+'.json'}).success(function(data)
+$http({method: 'GET', url: 'jsons/workshopcategories'+path+'.json'}).success(function(data)
 				   {
 				    jsonstr = data['workshopcategory']['workshops']; // response data 
 				   	for(i=0;i<jsonstr.length;i++)
@@ -97,6 +98,7 @@ $http({method: 'GET', url: 'http://cms.kurukshetra.org.in/workshopcategories'+pa
 $scope.getEvent = function(eventname){
 	// $(".header").hide();
 	$(".navbar").hide();
+	$(".category").hide();
 	$(".imagebox").each(function(){
       var elem = $(this);
       setTimeout(function(){
@@ -109,7 +111,7 @@ function init(){
 	$(".tabContent li").hide();
 	$(".tabContent").find("li.0").show();
 }
-	$http({method: 'GET', url: 'http://cms.kurukshetra.org.in/workshops/'+eventname+'.json'}).success(function(data)
+	$http({method: 'GET', url: 'jsons/workshops/'+eventname+'.json'}).success(function(data)
 				   {
 				    jsonstr = data['workshop']['tabs']; // response data 
 				   	for(i=0;i<jsonstr.length;i++)
@@ -156,7 +158,7 @@ function init(){
 							switch($scope.nodes[i]['title'])
 							{
 								case 'Angelo Vermeulen': $scope.nodes[i]['avatar'] = 'av.jpg'; break;
-								case 'Abhas Mitra': $scope.nodes[i]['avatar'] = 'chiragh.jpg'; break;
+								case 'Abhas Mitra ': $scope.nodes[i]['avatar'] = 'am.jpg'; break;
 								case 'Dr. Seshagiri Rao': $scope.nodes[i]['avatar'] = 'sr.jpeg'; break;
 								case 'Chiragh Dewan & Himanshu Vaishnav': $scope.nodes[i]['avatar'] = 'chiragh.png'; break;
 								case 'Hemanth Kumar Guruswamy': $scope.nodes[i]['avatar'] = 'Hemanth.jpg'; break;
@@ -205,7 +207,7 @@ $(".footer").show(1);
 $scope.events = [];
 $scope.tabs = [];
 $scope.eventName;
-$http({method: 'GET', url: 'http://cms.kurukshetra.org.in/kars.json'}).success(function(data)
+$http({method: 'GET', url: 'jsons/kars.json'}).success(function(data)
            {
               
             $scope.events = data;
@@ -240,7 +242,7 @@ function init(){
 }
 console.log("event name "+$scope.eventName);
 //$scope.tabs = [];
-  $http({method: 'GET', url: 'http://cms.kurukshetra.org.in/kars/'+eventname+'.json'}).success(function(data)
+  $http({method: 'GET', url: 'jsons/karnival/'+eventname+'.json'}).success(function(data)
            {
             jsonstr = data['tabs']; // response data 
             //console.log("kar tabs: ",JSON.stringify(jsonstr[1]));

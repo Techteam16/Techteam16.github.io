@@ -1,7 +1,7 @@
 <!--image boxes start -->
 <div ng-controller="wkshopsController">
 <div class="eventContainer col-md-10 col-xs-12 paddingReset clearfix" >
-<h2 class="col-md-12 col-xs-12 ribbontitle text-center">{{category}}</h2>
+<h2 class="col-md-12 col-xs-12 ribbontitle text-center category">{{category}}</h2>
 <div class="bottom col-md-12 col-xs-12 boxes paddingReset clearfix">
 <div class=" col-md-3 col-xs-12" id="eventsBox" ng-repeat="event in events">
   <div class="imagebox imageboxl" ng-click="getEvent(event.name);">
